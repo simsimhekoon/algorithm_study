@@ -6,32 +6,21 @@ public class C10807 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        String value = "";
-        int valueInt = 0;
-        int value1 = 0;
-        int value2 = 0;
-        int valueSume = 0;
+        String value = br.readLine();
+        int valueInt = Integer.parseInt(value);
+
+        String[] values = br.readLine().split(" ");
+        int[] valuesInt = new int[valueInt];
+
+        String value2 = br.readLine();
+        int value2Int = Integer.parseInt(value2);
+
         int count = 0;
 
-        value = br.readLine();
-        valueInt = Integer.parseInt(value);
-
-        if (valueInt < 10) {
-            valueInt *= 10;
-        }
-
-        int valueNew = valueInt;
-
-        while (true) {
-            count++;
-
-            value1 = valueNew / 10;
-            value2 = valueNew % 10;
-            valueSume = value1 + value2;
-            valueNew = (valueSume % 10) + (value2 * 10);
-
-            if (valueNew == valueInt) {
-                break;
+        for (int i = 0; i < valueInt; i++) {
+            valuesInt[i] = Integer.parseInt(values[i]);
+            if (valuesInt[i] == value2Int) {
+                count++;
             }
         }
         System.out.println(count);
