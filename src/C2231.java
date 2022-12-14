@@ -40,6 +40,4 @@ public class C2231 {
         System.out.println(result);
     }
 
-}{
-
 }
