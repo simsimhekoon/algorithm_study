@@ -3,8 +3,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class C15651 {
-    static boolean[] check = new boolean[8];
-    static int[] values = new int[8];
+    static boolean[] check = new boolean[9];
+    static int[] values = new int[9];
     static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws IOException {
